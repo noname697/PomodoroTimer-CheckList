@@ -5,7 +5,6 @@ const formAdicionarTarefa = document.querySelector('.app__form-add-task')
 const textarea = document.querySelector('.app__form-textarea')
 const ulTarefas = document.querySelector('.app__section-task-list')
 const paragrafoDescricaoTarefa = document.querySelector('.app__section-active-task-description')
-const btnCancelarTarefa = document.querySelector(".app__form-footer__button--cancel")
 
 const btnRemoverConcluidas = document.querySelector('#btn-remover-concluidas')
 const btnRemoverTodas = document.querySelector('#btn-remover-todas')
@@ -131,7 +130,3 @@ const removerTarefas = (somenteCompletas) => {
 btnRemoverConcluidas.onclick = () => removerTarefas(true)
 btnRemoverTodas.onclick = () => removerTarefas(false)
 
-btnCancelarTarefa.addEventListener('click', () => {
-    textarea.value = ''
-    formAdicionarTarefa.classList.add('hidden')
-}
