@@ -100,10 +100,6 @@ formAdicionarTarefa.addEventListener('submit', (evento) => {
     formAdicionarTarefa.classList.add('hidden')
 })
 
-btnCancelarTarefa.addEventListener('click', () => {
-    textarea.value = ''
-    formAdicionarTarefa.classList.add('hidden')
-}
 
 
 
@@ -134,3 +130,8 @@ const removerTarefas = (somenteCompletas) => {
 
 btnRemoverConcluidas.onclick = () => removerTarefas(true)
 btnRemoverTodas.onclick = () => removerTarefas(false)
+
+btnCancelarTarefa.addEventListener('click', () => {
+    textarea.value = ''
+    formAdicionarTarefa.classList.add('hidden')
+}
